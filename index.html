@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egress Calulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts/data.js"></script>
+   
+</head>
+<body  onload="populateDropdown()">
+    <header id='banner'>
+        <!-- <img src="resources/CIENERGIASOLARSAS.jpg" alt="" srcset=""> -->
+        <h1>Egress Calculator</h1>
+    </header>
+    <form>
+        <div>
+            <label for="product-line">Select a product line: </label>
+            <select name="product-line" id="sistemas" >
+                <option value="none">Select a product line</option>
+            </select><br>
+            <label for="unit-width">Unit width [inches]: </label>        
+            <input type="text" name="unit-width" id="unit-width" required>&nbsp<span></span><br>
+            <label for="unit-height">Unit height [inches]: </label>        
+            <input type="text" name="unit-height" id="unit-height" required><br>
+        </div>
+        <div class="window-configuration">
+            <label for="configuration-dropdown">Select frame configuration: </label>
+            <select name="configuration-dropdown" id="configurations"></select>
+            
+        </div>
+        <div class="check-buttons">
+            <div class="oriel">
+                <label for="oriel-checkbox">Oriel: </label>
+                <input type="checkbox" id="oriel-checkbox">
+
+                <label for="vent-height">Vent Height (for oriel): </label>
+                <input type="text" id=vent-height disabled><br>
+            </div>
+            <div class="highsill">
+                <label for="highsill-checkbox">High Sill: </label>
+                <input type="checkbox" id="highsill-checkbox">
+            </div>       
+            
+        </div>
+            <!-- <input type="reset" id="newCalculation" value="New Calculation"></input> -->
+        </form>
+        <div class="calculatebutton">
+        
+            <button id="calculate">Calculate</button>
+        </div>
+            
+    
+        <div id = "message">
+            <h2 class="calculation-result"></h2>
+            <h2 class="widthClearOpMessage"></h2>
+            <h2 class="heightClearOpMessage"></h2>
+            <h2 class="meet-egress"></h2>
+        </div>
+        <footer>
+            <!-- <p>By: A.Manotas</p> -->
+        </footer>
+
+        
+    
+    <script src="scripts/helper-functions.js"></script>
+    <script src="scripts/script.js"></script>    
+    <script src="scripts/calculations.js"></script>
+</body>
+</html>

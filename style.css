@@ -48,13 +48,14 @@ form {
 }
 
 button#calculate:hover {
-    background-color: #80BCE1;
+    background-color: #DBB75A;
     
 }
 
 div.calculatebutton {
     width: 10%;
     height: 20%;
+    min-width: 110px;
 }
 
 button {
@@ -64,4 +65,19 @@ button {
 
 label { 
     font-size: 110%;
+}
+
+aside {
+    /* padding: 10px; */
+    margin: 10px auto;
+}
+
+a {
+    padding: 5px 10px;
+    color: #333435;
+    font-size: 1em;
+}
+
+a:hover {
+    background-color: #DBB75A;
 }
